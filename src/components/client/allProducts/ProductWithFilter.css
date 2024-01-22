@@ -1,0 +1,21 @@
+.resFilter {
+    position: fixed; /* Change to fixed */
+    right: 0;
+    z-index: 999;
+    height: 100vh;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: visibility 0s, opacity 0.5s, height 0.9s,;
+    width: 90vw;
+}
+
+.open {
+    visibility: visible;
+    opacity: 1;
+    height: 100vh;
+    overflow: auto;
+    transition: visibility 0s, opacity 0.5s, height 0.9s;
+}

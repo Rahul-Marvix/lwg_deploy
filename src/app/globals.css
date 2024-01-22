@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: rgb(187, 187, 187);
+}
+
+/* @font-face {
+    font-family: "Roboto Mono";
+    src: url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400") format("woff2"),
+        url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400") format("woff");
+  }
+.admin-side{
+    font-family: "Roboto Mono", sans-serif;
+} */
+
+
+
+  

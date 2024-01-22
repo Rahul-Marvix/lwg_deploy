@@ -1,0 +1,56 @@
+.top_text{
+    font-family: 'Open Sans', sans-serif;
+   
+}
+
+@media (max-width:1020px){
+    .header-section .togglee .toggle-logo{
+        display: block;
+    } 
+    .list{
+        transform: translateX(-100%);
+        transition: transform ease 0.3s;
+    }
+
+    .list{
+        display: block;
+        width: 90%;
+        height: 80vh;
+        background-color: black;
+        position: absolute;
+        left: 0;
+        right: 0;
+       z-index: 1000;
+        padding-top: 0px;
+
+    }
+    .list ul li{
+        padding: 10px;
+        margin: 7px;
+        border-radius: 10px;
+        
+        font-size: larger;
+    }
+ 
+
+    .isActive{
+        transform: translateX(0%);
+    }
+  
+    
+}
+
+.head {
+    background-image: url("../../../assets/navbar_backgroud.png");
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    transition: transform 0.3s ease-in-out; /* Apply transition to transform */
+    transform: translateY(0); /* Default state, navbar is shown */
+}
+
+.head.hide {
+    transform: translateY(-100%); /* Hide navbar off-screen */
+}
+

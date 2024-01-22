@@ -1,0 +1,8 @@
+@media(min-width:720px){
+    .admin-nav{
+    
+        width: calc(100% - 256px); /* Adjust this based on your sidebar width */
+    left: 256px;
+    }
+
+}
