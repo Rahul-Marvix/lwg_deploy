@@ -13,14 +13,19 @@ export default async function page() {
 console.log("guestid : ",guestId);
   const getCartData = async () => {
     try {
-      const data = await userAxiosInstance.get("/cart/get", {
+      const response = await userAxiosInstance.get("/cart/get", {
         withCredentials: true,
         headers: {
           Cookie: `guestId=${guestId?.value}`,
         },
       });
-      if (data.status == 200) {
-        return data.data;
+      if (response.status == 200) {
+        if(response.data.cart.guest){
+          const guestId = response.data.cart.guest;
+          // Update the "guestId" cookie
+          cookies.set("guestId", guestId, { sameSite: "lax"});
+        }
+        return response.data;
       }
     } catch (error) {
       console.log(error);
