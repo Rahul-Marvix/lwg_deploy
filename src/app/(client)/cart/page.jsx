@@ -10,7 +10,7 @@ import Link from "next/link";
 export const revalidate = 0;
 export default async function page() {
   const guestId = cookies().get("guestId");
-
+console.log("guestid : ",guestId);
   const getCartData = async () => {
     try {
       const data = await userAxiosInstance.get("/cart/get", {
