@@ -20,10 +20,11 @@ console.log("guestid : ",guestId);
         },
       });
       if (response.status == 200) {
-        if(response.data.cart.guest){
+        if(response?.data?.cart?.guest){
+          console.log("response guest id : ",response.data.cart.guest)
           const guestId = response.data.cart.guest;
           // Update the "guestId" cookie
-          cookies.set("guestId", guestId, { sameSite: "lax"});
+          cookies.set("guestId", guestId);
         }
         return response.data;
       }
