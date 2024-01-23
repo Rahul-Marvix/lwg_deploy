@@ -1,17 +1,9 @@
 "use client";
 import React from "react";
+import { cookies } from "next/headers";
 import { toast } from "react-toastify";
 
-// function getCookie(name) {
-//   const cookies = document.cookie.split(";");
-//   for (let i = 0; i < cookies.length; i++) {
-//     const cookie = cookies[i].trim();
-//     if (cookie.startsWith(name + "=")) {
-//       return cookie.substring(name.length + 1, cookie.length);
-//     }
-//   }
-//   return null;
-// }
+
 
 import { userAxiosInstance } from "@/utils/axiosUtils";
 const setCookie = (name, value, days) => {
@@ -50,6 +42,12 @@ export default function AddToCartButton({ productId, quantity }) {
     
     console.log(res);
     if (res.data.success) {
+      if(response?.data?.cart?.guest){
+        console.log("response guest id : ",response.data.cart.guest)
+        const guestId = response.data.cart.guest;
+        // Update the "guestId" cookie
+        cookies.set("guestId", guestId);
+      }
       toast.success("Added to Cart");
     }
   };
