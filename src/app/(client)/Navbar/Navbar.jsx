@@ -19,26 +19,26 @@ export default function Navbar() {
   const pathname=usePathname()
 
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const controlNavbarVisibility = () => {
-      if (window.scrollY > lastScrollY) {
-        // Scrolling down
-        setShowNavbar(false);
-      } else {
-        // Scrolling up
-        setShowNavbar(true);
-      }
-      setLastScrollY(window.scrollY);
-    };
+  //   const controlNavbarVisibility = () => {
+  //     if (window.scrollY > lastScrollY) {
+  //       // Scrolling down
+  //       setShowNavbar(false);
+  //     } else {
+  //       // Scrolling up
+  //       setShowNavbar(true);
+  //     }
+  //     setLastScrollY(window.scrollY);
+  //   };
   
 
-    window.addEventListener("scroll", controlNavbarVisibility);
+  //   window.addEventListener("scroll", controlNavbarVisibility);
 
-    return () => {
-      window.removeEventListener("scroll", controlNavbarVisibility);
-    };
-  }, [lastScrollY]);
+  //   return () => {
+  //     window.removeEventListener("scroll", controlNavbarVisibility);
+  //   };
+  // }, [lastScrollY]);
 
 
   const [isLogin, setIsLogin] = useState(false);
@@ -79,7 +79,7 @@ export default function Navbar() {
   return (
     <header
       //  className="bg-[#72090D]"
-      className={`head  ${showNavbar ? "" : "hide"} `}
+      className={`head  `}
     >
       <nav>
         <div className="flex justify-center top_text sm:text-sm pt-4 lg:text-lg tracking-wide ">
