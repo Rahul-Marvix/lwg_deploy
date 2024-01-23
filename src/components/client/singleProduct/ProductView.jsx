@@ -109,9 +109,10 @@ export default function ProductView({ product }) {
           <span className="font-medium text-[#72090D] 2xl:text-2xl opacity-80">
             {product?.location?.name}
           </span>
-          <h1 className="2xl:text-5xl  xl:text-5xl text-4xl  mt-2 font-sans">
-            {product?.name}
-          </h1>
+          <h1 className="2xl:text-5xl xl:text-5xl text-3xl mt-2 font-sans break-words">
+  {product?.name}
+</h1>
+
         </div>
         {/* <p className="text-xl">
           {product.description}

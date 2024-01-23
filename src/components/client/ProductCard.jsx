@@ -6,7 +6,7 @@ import AddToCartButton from "./AddToCartButton";
 export default function ProductCard({ productImage, product }) {
 
   return (
-    <div className=" h-[440px] p-1 rounded-md max-w-xs  lg:h-[480px] mt-3  shadow-lg relative ">
+    <div className=" h-[450px] p-1 rounded-md max-w-xs  lg:h-[480px] mt-3  shadow-lg relative ">
       <Link href={"/productview/"+product?.slug}>
       <div className="overflow-hidden rounded-md">
         <Image
@@ -17,8 +17,8 @@ export default function ProductCard({ productImage, product }) {
           className=" lg:h-72 h-64  w-full hover:scale-105 transition-all duration-500  "
         />
       </div>
-      <div className="max-h-40    overflow-hidden  ">
-        <h2 className="font-medium text-md mt-2">
+      <div className="max-h-40   overflow-hidden  ">
+        <h2 className="font-medium lg:text-md mt-2 break-words line-clamp-3">
           {product ? product.name : "Hisense 8 KGS Heat Pump Dryer"}
         </h2>
       </div>

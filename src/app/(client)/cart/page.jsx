@@ -20,7 +20,6 @@ console.log("guestid : ",guestId);
         },
       });
       if (response.status == 200) {
-        
         return response.data;
       }
     } catch (error) {

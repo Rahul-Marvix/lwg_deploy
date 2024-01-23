@@ -45,7 +45,7 @@ export default function AddToCartButton({ productId, quantity }) {
       if(res?.data?.cart?.guest){
         console.log("response guest id : ",res.data.cart.guest)
         const guestId = res.data.cart.guest;
-        setCookie("guestId", guestId, 7);
+        setCookie("guestId41  3", guestId, 7);
       }
       toast.success("Added to Cart");
     }
