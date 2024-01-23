@@ -18,6 +18,7 @@
     "@tiptap/pm": "^2.1.13",
     "@tiptap/react": "^2.1.13",
     "@tiptap/starter-kit": "^2.1.13",
+    "@vercel/analytics": "^1.1.2",
     "axios": "^1.6.2",
     "ckeditor5-custom-build": "file:ckeditor5",
     "daisyui": "^4.0.7",
