@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
 import "@/app/globals.css";
 import Navbar from "./Navbar/Navbar";
 import NextTopLoader from "nextjs-toploader"
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
         <ToastContainer/>
+        <Analytics />
       </body>
     </html>
   );
