@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { cookies } from "next/headers";
+
 import { toast } from "react-toastify";
 
 
@@ -44,9 +44,8 @@ export default function AddToCartButton({ productId, quantity }) {
     if (res.data.success) {
       if(response?.data?.cart?.guest){
         console.log("response guest id : ",response.data.cart.guest)
-        const guestId = response.data.cart.guest;
-        // Update the "guestId" cookie
-        cookies.set("guestId", guestId);
+        const guestId = res.data.cart.guest;
+        setCookie("guestId", guestId, 7);
       }
       toast.success("Added to Cart");
     }
